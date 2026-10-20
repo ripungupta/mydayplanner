@@ -5,6 +5,7 @@ plugins {
     id("com.google.devtools.ksp")
 }
 
+
 android {
     namespace = "com.example.mydayplanner"
     compileSdk = 35
@@ -17,6 +18,16 @@ android {
         versionName = "1.0"
     }
     buildFeatures { compose = true }
+
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+}
+
+kotlinOptions {
+    jvmTarget = "17"
 }
 
 dependencies {
